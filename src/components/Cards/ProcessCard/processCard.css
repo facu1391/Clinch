@@ -1,0 +1,173 @@
+.process-card-container {
+  position: relative;
+  margin-top: var(--desktop-margin);
+  width: 100%;
+  background-image: url("../../../assets/images/Cards/processCard/process-card.webp");
+  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.process-card-container:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.process-card {
+  padding: 60px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.process-card h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-size: clamp(
+    1.5rem,
+    1.0999730893433801rem + 0.6458557588805166vw,
+    1.875rem
+  );
+  z-index: 1;
+}
+
+.process-card h3 span {
+  font-weight: 900;
+  color: var(--color-primary);
+}
+
+.process-card .cards {
+  background-color: rgba(83, 83, 83, 0.5);
+  padding: 40px;
+  border-radius: 16px;
+  font-weight: bold;
+  display: flex;
+  z-index: 1;
+}
+.process-card .cards div {
+  text-align: center;
+  max-width: 315px;
+}
+.process-card .cards hr {
+  border: 3px solid var(--color-primary);
+  border-radius: 4px;
+  margin: 0px 20px;
+}
+.process-card .cards div h4 {
+  font-weight: bold;
+  height: auto;
+  margin-bottom: 20px;
+  color: var(--color-primary);
+  font-size: 1.25rem;
+  font-size: clamp(
+    1.25rem,
+    0.9833153928955867rem + 0.4305705059203444vw,
+    1.5rem
+  );
+}
+
+.process-card .cards div h4 span {
+  font-weight: 900;
+}
+
+.process-card .cards p {
+  font-weight: normal;
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.7333153928955867rem + 0.4305705059203444vw, 1.25rem);
+}
+
+@media (width <= 991px) {
+  .process-card-container {
+    margin-top: var(--tablet-margin);
+    height: auto;
+    width: 100%;
+    background-attachment: local;
+  }
+  .process-card {
+    padding: 70px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .process-card h3 {
+    font-size: 1.625rem;
+    font-size: clamp(
+      1.625rem,
+      1.2727495107632094rem + 1.1741682974559686vw,
+      2rem
+    );
+  }
+
+  .process-card .cards {
+    padding: 50px;
+    flex-direction: column;
+  }
+  .process-card .cards div {
+    text-align: center;
+    width: auto;
+    margin: 0px;
+  }
+  .process-card .cards hr {
+    border: 1px solid var(--color-primary);
+    margin: 15px 0px;
+  }
+  .process-card .cards div h4 {
+    height: auto;
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+    font-size: clamp(
+      1.25rem,
+      0.8977495107632094rem + 1.1741682974559686vw,
+      1.625rem
+    );
+  }
+  .process-card .cards p {
+    font-size: 1rem;
+    font-size: clamp(
+      1rem,
+      0.7651663405088063rem + 0.7827788649706457vw,
+      1.25rem
+    );
+  }
+}
+
+@media (width <= 480px) {
+  .process-card {
+    padding: 50px;
+    gap: 40px;
+  }
+  .process-card h3 {
+    font-size: 0.875rem;
+    font-size: clamp(0.875rem, 0.125rem + 5vw, 1.625rem);
+  }
+  .process-card .cards {
+    background-color: rgba(83, 83, 83, 0.5);
+    padding: 40px;
+  }
+
+  .process-card .cards hr {
+    margin: 15px 0px;
+  }
+  .process-card .cards div h4 {
+    margin-bottom: 12px;
+    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 0.125rem + 4.166666666666666vw, 1.375rem);
+  }
+  .process-card .cards p {
+    font-size: 0.625rem;
+    font-size: clamp(0.625rem, 0.125rem + 3.3333333333333335vw, 1.125rem);
+  }
+}

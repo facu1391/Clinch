@@ -1,0 +1,109 @@
+.home-card-container {
+  margin-top: var(--desktop-margin);
+  display: flex;
+  padding: 20px 0px;
+  justify-content: center;
+}
+
+.home-card {
+  box-shadow: 0px 0px 14px rgba(204, 216, 255, 0.6);
+  background-color: #fafbff;
+  border-radius: 16px;
+  width: min(1500px, 90%);
+  height: auto;
+  padding: 40px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-content: center;
+  align-items: center;
+}
+
+.home-card .text-content h3 {
+  font-size: 2.25rem;
+  font-size: clamp(2.25rem, 1.8552421924792861rem + 0.6373486297004461vw, 2.875rem);
+}
+.home-card .text-content h3 span {
+  font-weight: 900;
+  color: var(--color-primary);
+}
+
+.home-card .text-content p {
+  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 0.9833153928955867rem + 0.4305705059203444vw, 1.5rem);
+  margin: 30px 0;
+}
+.home-card .text-content p span {
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.home-card .slider-content {
+  padding-left: 15%;
+}
+
+@media(width <= 991px){
+  .home-card-container {
+    margin-top: var(--tablet-margin);
+    padding: 20px 0px;
+  }
+  .home-card {
+    box-shadow: none;
+    background-color: white;
+    border-radius: none;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    grid-template-columns: 1fr;
+    gap: 6rem;
+  }
+  .home-card .text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 14px rgba(204, 216, 255, 0.6);
+    background-color: #fafbff;
+    border-radius: 8px;
+    margin: 0 6vw;
+    padding: 14vw 8vw;
+  }
+  .home-card .text-content h3 {
+    text-align: center;
+    font-size: 2.25rem;
+    font-size: clamp(2.25rem, 1.7803326810176126rem + 1.5655577299412915vw, 2.75rem);
+    animation: none;
+  }
+  .home-card .text-content p {
+    margin: 4vw 0;
+    font-size: 1.375rem;
+    font-size: clamp(1.375rem, 1.1401663405088063rem + 0.7827788649706457vw, 1.625rem);
+  }
+  .home-card .slider-content {
+    padding-left: 0;
+  }
+}
+
+@media(width <= 480px){
+  .home-card-container {
+    margin-top: var(--mobile-margin);
+  }
+  .home-card {
+    gap: 4rem;
+  }
+  .home-card .text-content {
+    box-shadow: 0px 0px 10px rgba(204, 216, 255, 0.7);
+    margin: 0 4vw;
+    padding: 12vw 8vw;
+  }
+
+  .home-card .text-content h3 {
+    text-align: center;
+    font-size: 1.25rem;
+    font-size: clamp(1.25rem, 0.25rem + 6.666666666666667vw, 2.25rem);  
+  }
+  .home-card .text-content p {
+    margin: 20px 0;
+    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 0.25rem + 3.3333333333333335vw, 1.25rem);
+  }
+}

@@ -1,42 +1,26 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@font-face {
+  font-family: "RethinkSans";
+  src: url('assets/fonts/RethinkSans.ttf') format('truetype');
+}
+:root{
+  --color-primary: #328AB8;
+  --color-secondary: #56b7ff;
+  --color-tertiary: #60A4C8;
+  --font-size-very-small: 16px;
+  --font-size-small: 18px;
+  --font-size-buttons: 21px;
+  --font-size-big: 32px;
+  --font-size-titles-small: 24px;
+  --font-size-titles-medium: 62px;
+  --font-size-titles-big: 96px;
+  --desktop-margin: 100px;
+  --tablet-margin: 75px;
+  --mobile-margin: 50px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: "RethinkSans",'Arial Narrow', Arial, sans-serif;
 }

@@ -1,0 +1,64 @@
+.apply-contact-button {
+  width: fit-content;
+}
+.apply-contact-button a {
+  text-decoration: none;
+}
+.apply-contact-button button {
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 22px;
+  border: none;
+  border-radius: clamp(3px, 1vw, 6px);
+  background-color: #0083cf;
+  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 0.9833153928955867rem + 0.4305705059203444vw, 1.5rem);
+  color: white;
+  gap: clamp(6px, 2vw, 24px);
+}
+@keyframes moveIcon {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(25%);
+  }
+  60% {
+    transform: translateX(60%);
+  }
+}
+.apply-contact-button .arrow {
+  margin-top: 1px;
+  width: clamp(7px, 1vw, 12px);
+  height: auto;
+  animation: moveIcon 1.2s linear infinite;
+}
+@media(width <= 991px) {
+  .apply-contact-button button {
+    min-width: 140px;
+    border-radius: 1vw;
+    padding: 11% 20%;
+    font-size: 1.375rem;
+    font-size: clamp(1.375rem, 1.1401663405088063rem + 0.7827788649706457vw, 1.625rem);
+    gap: 2vw;
+  }
+  .apply-contact-button .arrow {
+    margin-top: 1.2px;
+    width: clamp(0.5rem, 0.2651663405088063rem + 0.7827788649706457vw, 0.75rem);
+  }
+}
+
+
+@media(width <= 480px) {
+  .apply-contact-button button {
+    border-radius: 1.5vw;
+    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 0.25rem + 3.3333333333333335vw, 1.25rem);
+  }
+  .apply-contact-button .arrow {
+    width: clamp(0.375rem, 0.3125rem + 0.4166666666666667vw, 0.4375rem);
+  }
+}
