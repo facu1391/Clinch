@@ -1,0 +1,141 @@
+.navbar-container{
+  height: 80px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 0px 5px 5px -5px rgba(82, 82, 82, 0.3);
+  z-index: 3;
+  position: fixed;
+  background-color: white;
+}
+
+.navbar {
+  width: min(1500px,100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .container-logo {
+  margin-left: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 160px;
+  height: 80px;
+}
+.navbar .logo {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+.navbar a{
+  text-decoration: none;
+}
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+}
+.nav-links li {
+  padding: 0 20px;
+  display: inline-block;
+  color: black;
+  list-style-type: none;
+  position: relative;
+}
+.nav-links li a {
+  font-weight: 900;
+  color: black;
+  font-size: var(--font-size-buttons);
+  text-decoration: none;
+}
+
+.nav-links li a:hover {
+  color: #328ab8;
+}
+
+.nav-links li a.active {
+  color: var(--color-primary);
+}
+
+
+.btn-contact {
+  border: 1px #328ab8 solid;
+  border-radius: 8px;
+  font-size: var(--font-size-buttons);
+  font-weight: bold;
+  color: white;
+  width: 160px;
+  height: 48px;
+  padding: 8px;
+  background-color: var(--color-primary);
+  cursor: pointer;
+  margin-right: 4vw;
+}
+.btn-contact:hover {
+  border: 1px var(--color-secondary) solid;
+  background-color: var(--color-secondary);
+}
+
+.burger-button {
+  margin-right: 2rem;
+  display: none;
+}
+@media (width <= 991px) {
+  .nav-menu {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 80px;
+    right: -40vw;
+    width: 40vw;
+    height: 100vh;
+    padding: 15vw;
+    transition: 0.4s ease-in-out;
+    z-index: 1;
+  }
+  .nav-menu.expanded {
+    right: 0;
+  }
+  .nav-links li {
+    margin-bottom: 3vw;
+    display: block;
+  }
+  .nav-links li a {
+    font-size: 3.5vw;
+  }
+  .btn-contact{
+    border-radius: 8px;
+    font-size: 3.5vw;
+    padding: 7% 10%;
+    width: fit-content;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 10vw;
+  }
+  .burger-button {
+    display: block;
+  }
+}
+
+@media (width <= 480px) {
+  .nav-menu {
+    right: -60vw;
+    width: 60vw;
+  }
+  .nav-links li a {
+    font-size: 5.5vw;
+  }
+  .btn-contact{
+    font-size: 5.5vw;
+    margin-bottom: 30vw;
+  }
+}

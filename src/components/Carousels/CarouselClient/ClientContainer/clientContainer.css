@@ -1,0 +1,51 @@
+.carousel-client-container {
+  margin-top: var(--desktop-margin);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-client {
+  width: min(1500px,80%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: min(20px,2vw);
+}
+.carousel-client h2 {
+  font-weight: normal;
+  text-align: center;
+  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1.0999730893433801rem + 0.6458557588805166vw, 1.875rem);
+}
+
+.carousel-client h2 span {
+  font-weight: 900;
+  color: var(--color-primary);
+}
+
+
+@media (width <= 991px) {
+  .carousel-client-container {
+    margin-top: var(--tablet-margin);
+  }
+  .carousel-client h2 {
+    margin-top: 8px;
+    margin-bottom: 7px;
+    font-size: 1.625rem;
+    font-size: clamp(1.625rem, 1.2727495107632094rem + 1.1741682974559686vw, 2rem);
+  }
+}
+
+@media(width <= 480px) {
+  .carousel-client-container {
+    margin-top: var(--mobile-margin);
+  }
+  .carousel-client h2 {
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 7px;
+    font-size: 0.875rem;
+    font-size: clamp(0.875rem, 0.125rem + 5vw, 1.625rem);
+  }
+}

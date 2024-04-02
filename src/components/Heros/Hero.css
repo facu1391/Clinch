@@ -1,0 +1,109 @@
+.hero {
+  height: auto;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  background-attachment: fixed;
+}
+.hero:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.hero.home {
+  position: relative;
+  background-image: url("../../assets/images/Heros/heroHome/hero-home.webp");
+  background-color: rgb(4, 50, 87);
+}
+
+.hero.candidates {
+  position: relative;
+  background-image: url("../../assets/images/Heros/heroCandidates/hero-candidates.webp");
+  background-position: top;
+}
+.hero-container{
+  width: min(1550px,100%);
+}
+.hero .content {
+  padding: 7% 0% 12% 10%;
+}
+.hero .content h1 {
+  width: fit-content;
+}
+.hero .content h1 span {
+  display: block;
+  line-height: 1;
+  font-weight: bold;
+  font-size: 4.375rem;
+  font-size: clamp(4.375rem, 3.3579638752052547rem + 1.6420361247947455vw, 5rem);
+  animation: fade-in-left 1.2s ease forwards;
+}
+
+.hero .content h1 span:nth-child(1) {
+  color: white;
+}
+.hero .content h1 span:nth-child(2) {
+  color: #60a4c8;
+}
+.hero .content h1 span:nth-child(3) {
+  color: var(--color-primary);
+}
+
+.hero .content p {
+  max-width: 560px;
+  margin: 2% 0;
+  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 0.9833153928955867rem + 0.4305705059203444vw, 1.5rem);
+  color: white;
+  opacity: 0;
+  animation: fade-in-right 1.2s ease forwards 0.8s;
+}
+
+.hero .content p span {
+  font-weight: bold;
+  color: var(--color-secondary);
+}
+.hero .content button {
+  background: rgba(0, 131, 207, 0.7);
+  opacity: 0;
+  animation: fade-in 1.2s ease forwards 2s;
+}
+@media(width <= 991px){
+  .hero {
+    background-attachment: local;
+  }
+  .hero .content {
+    padding: 7% 0% 12% 6%;
+  }
+  .hero .content p{
+    width: auto;
+    font-size: 1.375rem;
+    font-size: clamp(1.375rem, 1.1401663405088063rem + 0.7827788649706457vw, 1.625rem);
+  }
+}
+
+@media(width <= 480px){
+  .hero.home {
+    background-image: url("../../assets/images/Heros/heroHome/hero-home-480px.webp");
+  }
+  .hero.hero.candidates {
+    background-image: url("../../assets/images/Heros/heroCandidates/hero-candidates-480px.webp");
+  }
+  .hero .content h1 span {
+    font-size: 2.375rem;
+    font-size: clamp(2.375rem, 1rem + 9.166666666666666vw, 3.75rem);
+  }
+  .hero .content p {
+    margin: 3% 8% 5% 0;
+    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 0.25rem + 3.3333333333333335vw, 1.25rem);
+  }
+}
+
+
